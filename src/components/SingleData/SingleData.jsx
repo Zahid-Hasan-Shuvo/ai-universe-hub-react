@@ -6,7 +6,7 @@ const SingleData = (props) => {
     const {name, features, description, image, published_in,}=props.singleData;
     return (
         <div>
-           <div className="card w-96 bg-base-100 shadow-xl">
+           <div className="card w-96 bg-base-100 shadow-xl border-2 border-stone-700">
   <figure><img src={image} alt="img" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold ">Features</h2>

@@ -14,7 +14,7 @@ function App() {
    <Header></Header>
    <Button>Sort By Date  <FontAwesomeIcon icon={faArrowDown} /></Button>
    <Card></Card>
-   <Button>See more..</Button>
+ 
     </>
   )
 }
