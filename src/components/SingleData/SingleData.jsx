@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const SingleData = (props) => {
-    const {name, features, description, image, published_in,}=props.singleData;
+    const {id, name, features, description, image, published_in}=props.singleData;
+   
     return (
         <div>
            <div className="card w-96 bg-base-100 shadow-xl border-2 border-stone-700">
@@ -11,7 +12,7 @@ const SingleData = (props) => {
   <div className="card-body">
     <h2 className="card-title font-bold ">Features</h2>
     {
-        features.map((feature, index)=> <ol><p className='text-left '>{index+1}.{feature}</p></ol> )
+        features.map((feature, index)=> <p className='text-left '>{index+1}.{feature}</p> )
     }
   
     <div className=" border-b-2 border-white "> 
@@ -22,7 +23,13 @@ const SingleData = (props) => {
         <p className='text-left'>   <FontAwesomeIcon icon={faCalendarDay} /> {published_in}</p>
        </div>
         <div>
+       
+       <button onClick={()=>props.setUniqueId(id)}>
+       <span className="btn"  onClick={()=>document.getElementById('my_modal_1').showModal()}> 
         <FontAwesomeIcon className='cursor-pointer' icon={faArrowRight} />
+        </span>
+       </button>
+       
         </div>
       </div>
     
